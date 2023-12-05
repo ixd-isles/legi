@@ -42,7 +42,7 @@ function legiQuery(a) {
 		var listFile = a[i][4];
 		console.log(listFile);
 	//	crossArray[i].push(listFile);
-		var legiCall = encodeURI("https://webapi.legistar.com/v1/newark/matters?$filter=MatterFile eq '" + listFile + "'&format=json&callback=cupcake");
+		var legiCall = encodeURI("https://webapi.legistar.com/v1/newark/matters?$filter=MatterFile eq '" + listFile + "'&format=xml&callback=cupcake");
 	console.log(legiCall);
 	const xhr = new XMLHttpRequest();
 	var cleanLink = "https://cloudquery.t9t.io/query?url=" + legiCall;
