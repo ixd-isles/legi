@@ -45,8 +45,9 @@ function legiQuery(a) {
 		var legiCall = encodeURI("https://webapi.legistar.com/v1/newark/matters?$filter=MatterFile eq '" + listFile + "'&format=json&callback=cupcake");
 	console.log(legiCall);
 	const xhr = new XMLHttpRequest();
-	xhr.open("GET", legiCall);
-
+	var cleanLink = "https://cloudquery.t9t.io/query?url=" + legiCall;
+	console.log(cleanLink);
+	xhr.open("GET", cleanLink);
 	xhr.send();
 
 
